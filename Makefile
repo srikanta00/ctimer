@@ -16,16 +16,19 @@ OBJECTS := $(addprefix $(BIN_DIR)/, $(notdir $(SOURCES:.c=.o)))
 all : $(TARGET)
 
 $(TARGET) : $(BIN_DIR) $(OBJECTS)
-	$(CC) -shared $(OBJECTS) $(LIBS) -o $@
+	@echo Linking $@
+	@$(CC) -shared $(OBJECTS) $(LIBS) -o $@
 
 
 $(BIN_DIR) :
-	if [ ! -d $(BIN_DIR) ]; then mkdir $(BIN_DIR); fi
+	@echo Creating $(BIN_DIR) directory
+	@if [ ! -d $(BIN_DIR) ]; then mkdir $(BIN_DIR); fi
 
 
 $(BIN_DIR)/%.o : %.c
-	$(CC) $(INCLUDES) -o $@ -c $<
+	@echo Compiling $<
+	@$(CC) $(INCLUDES) -o $@ -c $<
 
 
 clean:
-	rm -rf $(BIN_DIR)
+	@rm -rf $(BIN_DIR)
