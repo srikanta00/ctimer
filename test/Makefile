@@ -1,7 +1,7 @@
 TARGET = timertest
 
 INCLUDES = -I. \
-	   -I..
+	   -I../src
 
 SOURCES = timertest.c
 
@@ -26,6 +26,6 @@ ctimer :
 
 
 clean:
-	rm -f *.o
-	rm $(TARGET)
+	@rm -f *.o
+	@rm -f $(TARGET)
 	$(MAKE) all --directory $(SHARED_OBJECTS_HOME)

@@ -5,6 +5,8 @@ INCLUDES = -I.
 
 LIBS = -lpthread
 
+VPATH := src
+
 SOURCES = ctimer.c
 
 BIN_DIR = ./Bin
