@@ -19,3 +19,6 @@ It has the following functions:
 
 # Example
 An example program is availble in the 'test' directory. For to the 'test' directory and run 'make' command to create the 'timertest' executable in the 'test' directory.
+
+# Note
+This program is tested on 'Ubuntu 20.04.4'. But it should work on other Linux environments.
