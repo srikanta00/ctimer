@@ -28,4 +28,4 @@ ctimer :
 clean:
 	@rm -f *.o
 	@rm -f $(TARGET)
-	$(MAKE) all --directory $(SHARED_OBJECTS_HOME)
+	$(MAKE) clean --directory $(SHARED_OBJECTS_HOME)
