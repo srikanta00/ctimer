@@ -5,7 +5,7 @@ C timer library (shared object) - it allows us to create multiple timers - perio
 Run 'make' command from the home directory. A shared object (libctimer.so) will be created in the 'Bin' directory. It can be linked with your application.
 
 # Interface and Usage
-The programming interface is defined in 'ctimer.h'.
+The programming interface is defined in 'src/ctimer.h'.
 
 It has the following functions:
 1. initialize(): It needs to be called once and before any other function call of this library. It creates the internal data structures.
