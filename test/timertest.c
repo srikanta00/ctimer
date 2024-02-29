@@ -24,6 +24,7 @@ void main()
     size_t timer1, timer2, timer3;
 
     initialize();
+	sleep(2);
 
     timer1 = start_timer(200, time_handler1, TIMER_SINGLE_SHOT, NULL);
     timer2 = start_timer(100, time_handler2, TIMER_PERIODIC, NULL);

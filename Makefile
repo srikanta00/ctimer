@@ -19,7 +19,7 @@ all : $(TARGET)
 
 $(TARGET) : $(BIN_DIR) $(OBJECTS)
 	@echo Linking $@
-	@$(CC) -shared $(OBJECTS) $(LIBS) -o $@
+	@$(CC) -shared -fPIC $(OBJECTS) $(LIBS) -o $@
 
 
 $(BIN_DIR) :
@@ -29,7 +29,7 @@ $(BIN_DIR) :
 
 $(BIN_DIR)/%.o : %.c
 	@echo Compiling $<
-	@$(CC) $(INCLUDES) -o $@ -c $<
+	@$(CC) $(INCLUDES) -o $@ -c -fPIC $<
 
 
 clean:
